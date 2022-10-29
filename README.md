@@ -1,5 +1,3 @@
-# WAD2022-Lab11
-
 # WAD2022-Lab11-solution
 
 ## Pre-requisites
@@ -7,7 +5,7 @@ Node.js \& NPM
 
 ## Clone the repository
 ```
-git clone https://github.com/M-Gharib/WAD2022-Lab11.git
+git clone https://github.com/M-Gharib/WAD2022-Lab11-solution.git
 ```
 
 ## Navigate to the project directory
