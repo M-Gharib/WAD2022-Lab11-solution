@@ -8,6 +8,24 @@ app.listen(3000);
 1- arg1: represents what path/url you want to listen to (e.g., '/' listens to index path)
 2- arg2: represents a function that takes in request and response objects */
 
+
+/* 
+task (8)
+app.use((req, res) => {
+    console.log(‘a new request was made to the server');
+}); 
+*/
+
+
+/* 
+solution of the last task - task (9)
+app.use((req, res, next) => {
+    console.log('a new request was made to the server');
+    next();
+}); 
+*/
+
+
 app.get('/', (req, res) => {
     // res.send can be used to send text and HTML snippets
     //res.send('</h1>First HTML response message! </h1>');
@@ -24,11 +42,12 @@ app.get('/posts', (req, res) => {
     res.sendFile('./views/posts.html', { root: __dirname });
 });
 
+// task (7)
 app.get('/contactus', (req, res) => {
     res.sendFile('./views/contactus.html', { root: __dirname });
 });
 
-// We will discuss this method next week, when we speak about Middlewares
+
 app.use((req, res) => {
     res.status(404).sendFile('./views/404.html', { root: __dirname });
 });
